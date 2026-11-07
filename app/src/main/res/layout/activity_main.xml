@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baggage Hall Calculator"
+            android:textColor="#FACC15"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Main Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:elevation="4dp">
+
+            <!-- Instruction -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Enter baggage weight and select ticket class below."
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Baggage Weight-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Baggage Weight (kg)"
+                android:textColor="#0F172A"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="e.g. 25"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Ticket Class Selection -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ticket Class"
+                android:textColor="#0F172A"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <RadioGroup
+                android:id="@+id/rgClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbEconomy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Economy (20kg)"
+                    android:textColor="#0F172A"
+                    android:layout_marginRight="16dp" />
+
+                <RadioButton
+                    android:id="@+id/rbBusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business (40kg)"
+                    android:textColor="#0F172A" />
+            </RadioGroup>
+
+            <!-- Excess Rate -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Excess Rate per kg (RM)"
+                android:textColor="#0F172A"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etRate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="15"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#FACC15"
+                android:text="Calculate Fee"
+                android:textColor="#0F172A"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!-- Result-->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E293B"
+            android:padding="16dp"
+            android:textColor="#FACC15"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:hint="Results will appear here..."
+            android:textColorHint="#64748B" />
+
+        <!-- Explanation -->
+        <TextView
+            android:id="@+id/tvExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E293B"
+            android:padding="12dp"
+            android:textColor="#CBD5E1"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp"
+            android:hint="Calculation formula breakdown notes..."
+            android:textColorHint="#64748B" />
+
+        <!-- About App & Developer Button -->
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#E2E8F0"
+            android:text="About App &amp; Developer"
+            android:textColor="#0F172A"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
